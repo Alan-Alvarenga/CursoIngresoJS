@@ -1,4 +1,8 @@
-/*4.	Para el departamento de iluminación:
+/*Alvarenga, Alan David
+Division A
+TP Ferrete
+
+4.	Para el departamento de iluminación:
 Tomando en cuenta que todas las lámparas están en oferta al mismo precio de $35 pesos final.
 A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%. 
 B.	Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % y si es de otra marca el descuento es del 30%.
@@ -23,41 +27,56 @@ function CalcularPrecio ()
  	precio = 35;
  	IIBB=0.1;
 
- 	/*A*/
- 	if (cantidad>5) {
- 		descuento= 0.5; }
+ 	switch (cantidad) {
+        case "5":
+            switch (marca) {
+ 		        case "ArgentinaLuz":
+ 			        descuento= 0.6;
+ 		    	break;
 
- 	/*B*/
- 	if (cantidad==5) {
+ 		        default:
+ 			        descuento= 0.7;
+ 			    break;
+            }
+        break;
 
- 		if (marca=="ArgentinaLuz") {
- 			descuento= 0.6; }
+ 	    case "4":
+ 	        switch (marca) {
+ 	            case "ArgentinaLuz":
+ 	            case "FelipeLamparas":
+ 	                descuento= 0.75;
+ 	            break;
+ 	        
+ 	            default:
+ 	                descuento=0.8;
+ 	            break;
+ 	        }
+ 	    break;
 
- 		else {
- 			descuento= 0.7; }
- 	}
+        case "3":
+            switch (marca) {
+                case "ArgentinaLuz":
+                    descuento= 0.85;
+                break;
+                
+                case "FelipeLamparas":
+                    descuento= 0.9;
+                break;
+                
+                default:
+                    descuento= 0.95;
+                break;
+            }
+        break;
 
- 	/*C*/
- 	if (cantidad==4) {
-
- 		if (marca=="ArgentinaLuz" || marca=="FelipeLamparas") {
- 		descuento= 0.75; }
-
- 		else {
- 		descuento= 0.8; }
- 	}
-
- 	/*D*/
- 	if (cantidad==3) {
-
- 		if (marca=="ArgentinaLuz") {
- 			descuento= 0.85; }
-
- 		else if (marca=="FelipeLamparas") {
- 			descuento= 0.9; }
-
- 		else {
- 			descuento= 0.95; }
+ 	    case "2":
+ 	    case "1":
+ 	        descuento= 1;
+ 	    break;
+ 	    
+ 	    default:
+ 	        descuento= 0.5;
+ 	    break;
  	}
 
  	/*RESULTADO*/

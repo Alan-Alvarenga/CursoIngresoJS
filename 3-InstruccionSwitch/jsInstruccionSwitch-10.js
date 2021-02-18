@@ -8,11 +8,12 @@ function mostrar()
 		case "Invierno":
 			switch (destino) {
 				case "Bariloche":
-				mensaje= "Se viaja";
+					mensaje= "Se viaja";
 				break;
 
 				default:
-				mensaje= "No se viaja";
+					mensaje= "No se viaja";
+				break;
 			}
 		break;
 
@@ -20,26 +21,28 @@ function mostrar()
 			switch (destino) {
 				case "Cataratas":
 				case "Mar del plata":
-				mensaje= "Se viaja";
+					mensaje= "Se viaja";
 				break;
 
 				default:
-				mensaje= "No se viaja";
+					mensaje= "No se viaja";
+				break;
 			}
 		break;
 
 		case "Otoño":
-		mensaje= "Se viaja";
+			mensaje= "Se viaja";
 		break;
 
 		case "Primavera":
 			switch (destino) {
 				case "Bariloche":
-				mensaje= "No se viaja";
+					mensaje= "No se viaja";
 				break;
 
 				default:
-				mensaje= "Se viaja";
+					mensaje= "Se viaja";
+				break;
 			}
 		break;
 	}
