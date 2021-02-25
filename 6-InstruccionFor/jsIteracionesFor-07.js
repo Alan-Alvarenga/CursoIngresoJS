@@ -1,7 +1,8 @@
 function mostrar()
 {
 
-	alert("ok");
-
+	let numeroIngresado
+	let i=0
+	
 
 }//FIN DE LA FUNCIÓN
