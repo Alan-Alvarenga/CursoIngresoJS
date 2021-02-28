@@ -92,7 +92,7 @@ function mostrar()
 				break;
 		}
 
-		contadorVueltas++
+		contadorVueltas=contadorVueltas++
 	}
 
 	if (contadorAlcohol > contadorBarbijo && contadorAlcohol > contadorJabon) {
